@@ -432,6 +432,195 @@ th {
   color: var(--color-muted);
 }
 
+.region-list {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.region-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.region-card-reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.region-card-reverse .region-card-image {
+  order: 2;
+}
+
+.region-card-image {
+  min-height: 24rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.region-image-west {
+  background-image: url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80");
+}
+
+.region-image-north {
+  background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80");
+}
+
+.region-image-east {
+  background-image: url("https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=80");
+}
+
+.region-card-content {
+  align-self: center;
+  padding: 3rem;
+}
+
+.region-card-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.region-card-content p:not(.eyebrow) {
+  color: var(--color-muted);
+}
+
+mark {
+  padding: 0.1rem 0.25rem;
+  background: #f3d899;
+  color: var(--color-ink);
+}
+
+.region-video {
+  max-width: 760px;
+  text-align: center;
+}
+
+.region-video .eyebrow {
+  color: var(--color-terracotta);
+}
+
+.region-video > p:not(.eyebrow) {
+  color: var(--color-muted);
+}
+
+.region-video video {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  background: var(--color-ink);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+
+.mission-panel {
+  align-self: start;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background: var(--color-sand);
+}
+
+.mission-panel .eyebrow,
+.contact-intro .eyebrow {
+  color: var(--color-terracotta);
+}
+
+.mission-panel h2,
+.about-copy h2,
+.contact-intro h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.mission-panel p:not(.eyebrow),
+.about-copy p:not(.eyebrow),
+.contact-intro p:not(.eyebrow) {
+  color: var(--color-muted);
+}
+
+.landmark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: var(--color-white);
+}
+
+.landmark iframe {
+  width: 100%;
+  min-height: 20rem;
+  border: 0;
+  border-radius: 0.75rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+
+.contact-form {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-sand);
+  border-radius: 0.35rem;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 3px solid rgba(216, 148, 56, 0.35);
+  border-color: var(--color-gold);
+}
+
+.form-field small {
+  display: block;
+  margin: 0.4rem 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.form-feedback {
+  margin: 1rem 0 0;
+  color: var(--color-terracotta);
+  font-weight: bold;
+}
+
 .regions-banner {
   margin-bottom: 5rem;
   border-radius: 1rem;
@@ -491,6 +680,30 @@ th {
   .media-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .region-card,
+  .region-card-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .region-card-reverse .region-card-image {
+    order: 0;
+  }
+
+  .region-card-content {
+    padding: 2rem;
+  }
+
+  .about-content,
+  .landmark,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .landmark {
+    padding: 2rem;
   }
 
   .recipe-detail-image {
