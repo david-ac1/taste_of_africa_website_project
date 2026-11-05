@@ -163,6 +163,23 @@ a {
   padding: 5rem 0;
 }
 
+.page-hero {
+  max-width: 760px;
+  margin-left: 5%;
+  margin-right: auto;
+  padding-bottom: 3rem;
+}
+
+.page-hero h1 {
+  max-width: 13ch;
+}
+
+.page-hero > p:last-child {
+  max-width: 38rem;
+  color: var(--color-muted);
+  font-size: 1.15rem;
+}
+
 .intro {
   max-width: 760px;
   text-align: center;
@@ -240,6 +257,65 @@ a {
   color: var(--color-muted);
 }
 
+.listing-note {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.recipe-listing {
+  padding-top: 2rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  overflow: hidden;
+  border: 1px solid rgba(112, 93, 80, 0.16);
+  border-radius: 1rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.recipe-image {
+  min-height: 12rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.recipe-image-jollof {
+  background-image: url("https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80");
+}
+
+.recipe-image-tagine {
+  background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80");
+}
+
+.recipe-image-injera {
+  background-image: url("https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80");
+}
+
+.recipe-image-bunny-chow {
+  background-image: url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80");
+}
+
+.recipe-image-isombe {
+  background-image: url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80");
+}
+
+.recipe-card-content {
+  padding: 1.5rem;
+}
+
+.recipe-card-content p:not(.card-label) {
+  min-height: 4.8rem;
+  color: var(--color-muted);
+}
+
 .regions-banner {
   margin-bottom: 5rem;
   border-radius: 1rem;
@@ -288,6 +364,10 @@ a {
   }
 
   .dish-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-grid {
     grid-template-columns: 1fr;
   }
 }
