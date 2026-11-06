@@ -53,6 +53,35 @@ favoriteButtons.forEach((button) => {
   });
 });
 
+const contactForm = document.querySelector("#contact-form");
+const formFeedback = document.querySelector("#form-feedback");
+
+if (contactForm && formFeedback) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const nameField = contactForm.querySelector("#name");
+    const messageField = contactForm.querySelector("#message");
+    const name = nameField.value.trim();
+    const message = messageField.value.trim();
+
+    if (message.length <= 20) {
+      formFeedback.textContent =
+        "Please tell us a little more. Your message must be longer than 20 characters.";
+      messageField.focus();
+      return;
+    }
+
+    contactForm.hidden = true;
+    formFeedback.textContent = `Thank you, ${name}! We've received your message.`;
+  });
+}
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const selectedRegion = button.dataset.filter;

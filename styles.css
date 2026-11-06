@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
+
 :root {
   --color-ink: #2e211b;
   --color-muted: #705d50;
@@ -7,8 +9,8 @@
   --color-gold: #d89438;
   --color-white: #fffdf9;
   --shadow-soft: 0 1rem 2.5rem rgba(46, 33, 27, 0.1);
-  --font-heading: Georgia, "Times New Roman", serif;
-  --font-body: Arial, Helvetica, sans-serif;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -112,6 +114,29 @@ a {
 
 .hero-content {
   max-width: 42rem;
+}
+
+.hero-video {
+  width: min(25rem, 100%);
+  margin-left: auto;
+  padding: 1rem;
+  border: 1px solid rgba(255, 253, 249, 0.35);
+  border-radius: 1rem;
+  background: rgba(46, 33, 27, 0.45);
+}
+
+.video-label {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  background: var(--color-ink);
 }
 
 .hero-content > p:not(.eyebrow) {
@@ -222,6 +247,7 @@ a {
 
 .dish-card {
   overflow: hidden;
+  margin: 0;
   border-radius: 1rem;
   background: var(--color-white);
   box-shadow: var(--shadow-soft);
@@ -254,6 +280,33 @@ a {
 }
 
 .dish-card-content p:not(.card-label) {
+  color: var(--color-muted);
+}
+
+mark {
+  padding: 0.1rem 0.25rem;
+  background: #f3d899;
+  color: var(--color-ink);
+}
+
+.trends {
+  padding-top: 1rem;
+}
+
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.trend-card {
+  padding: 1.5rem;
+  border-top: 4px solid var(--color-gold);
+  background: var(--color-white);
+}
+
+.trend-card p:last-child {
+  margin-bottom: 0;
   color: var(--color-muted);
 }
 
@@ -719,12 +772,20 @@ mark {
     min-height: 65vh;
   }
 
+  .hero-video {
+    display: none;
+  }
+
   .section-heading {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .dish-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-grid {
     grid-template-columns: 1fr;
   }
 

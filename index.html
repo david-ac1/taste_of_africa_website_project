@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore the vibrant flavors and culinary traditions of Africa.">
   <title>TASTES OF AFRICA | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -33,6 +36,13 @@
         </p>
         <a class="button" href="recipes.html">Explore recipes</a>
       </div>
+      <div class="hero-video">
+        <p class="video-label">A taste of the journey</p>
+        <video controls preload="metadata">
+          <source src="assets/NIGERIAN PARTY JOLLOF RICE - Kikifoodies (360p, h264).mp4" type="video/mp4">
+          Your browser does not support local video playback.
+        </video>
+      </div>
     </section>
 
     <section class="intro section-container" aria-labelledby="intro-title">
@@ -55,35 +65,35 @@
       </div>
 
       <div class="dish-grid">
-        <article class="dish-card">
+        <figure class="dish-card">
           <div class="dish-image dish-image-jollof" role="img" aria-label="A bowl of colorful jollof rice"></div>
-          <div class="dish-card-content">
+          <figcaption class="dish-card-content">
             <p class="card-label">West Africa</p>
             <h3>Jollof Rice</h3>
-            <p>A beloved one-pot dish filled with tomatoes, peppers, and warmth.</p>
+            <p>A beloved one-pot dish filled with <mark>tomatoes and peppers</mark>.</p>
             <a class="text-link" href="recipes.html">Read the story</a>
-          </div>
-        </article>
+          </figcaption>
+        </figure>
 
-        <article class="dish-card">
+        <figure class="dish-card">
           <div class="dish-image dish-image-tagine" role="img" aria-label="A Moroccan tagine with vegetables"></div>
-          <div class="dish-card-content">
+          <figcaption class="dish-card-content">
             <p class="card-label">North Africa</p>
             <h3>Moroccan Tagine</h3>
-            <p>Slow cooking, fragrant spices, and layers of savory-sweet flavor.</p>
+            <p>Slow cooking, <mark>fragrant spices</mark>, and layers of savory-sweet flavor.</p>
             <a class="text-link" href="recipes.html">Read the story</a>
-          </div>
-        </article>
+          </figcaption>
+        </figure>
 
-        <article class="dish-card">
+        <figure class="dish-card">
           <div class="dish-image dish-image-injera" role="img" aria-label="Injera served with Ethiopian stews"></div>
-          <div class="dish-card-content">
+          <figcaption class="dish-card-content">
             <p class="card-label">East Africa</p>
             <h3>Injera</h3>
-            <p>A tangy, spongy flatbread made for sharing and gathering.</p>
+            <p>A tangy flatbread shaped by <mark>fermentation and sharing</mark>.</p>
             <a class="text-link" href="recipes.html">Read the story</a>
-          </div>
-        </article>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -95,6 +105,32 @@
         techniques, and recipes passed from one generation to the next.
       </p>
       <a class="button button-secondary" href="regions.html">Explore the regions</a>
+    </section>
+
+    <section class="trends section-container" aria-labelledby="trends-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">From the food community</p>
+          <h2 id="trends-title">Latest food trends</h2>
+        </div>
+      </div>
+      <div class="trend-grid">
+        <article class="trend-card">
+          <p class="card-label">Ingredient spotlight</p>
+          <h3>Ancient grains return to the table</h3>
+          <p>Teff, millet, and fonio are inspiring new ways to cook nutritious grains.</p>
+        </article>
+        <article class="trend-card">
+          <p class="card-label">Cooking culture</p>
+          <h3>One-pot meals bring people together</h3>
+          <p>Shared dishes continue to make everyday meals feel like celebrations.</p>
+        </article>
+        <article class="trend-card">
+          <p class="card-label">Modern traditions</p>
+          <h3>African flavors travel globally</h3>
+          <p>Chefs are introducing regional spices, sauces, and techniques to new audiences.</p>
+        </article>
+      </div>
     </section>
   </main>
 
